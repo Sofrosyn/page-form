@@ -4,7 +4,7 @@ Pageform is a web application that can Manage event registrations, create a quic
 
 ## Demo
 
-[![Live](page-form-livid.vercel.app)]
+[![Live]](page-form-livid.vercel.app)
 
 
 
