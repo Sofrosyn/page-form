@@ -1,10 +1,10 @@
 "use client";
+
 import { formSchema, formSchemaType } from "@/schemas/form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { ImSpinner2 } from "react-icons/im";
 import { Button } from "./ui/button";
-import { BsFileEarmarkPlus } from "react-icons/bs";
 import {
   Dialog,
   DialogContent,
@@ -19,6 +19,7 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { toast } from "./ui/use-toast";
 import { CreateForm } from "@/actions/form";
+import { BsFileEarmarkPlus } from "react-icons/bs";
 import { useRouter } from "next/navigation";
 
 function CreateFormBtn() {
@@ -26,6 +27,7 @@ function CreateFormBtn() {
   const form = useForm<formSchemaType>({
     resolver: zodResolver(formSchema),
   });
+
   async function onSubmit(values: formSchemaType) {
     try {
       const formId = await CreateForm(values);
@@ -42,6 +44,7 @@ function CreateFormBtn() {
       });
     }
   }
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -58,7 +61,6 @@ function CreateFormBtn() {
           <DialogTitle>Create form</DialogTitle>
           <DialogDescription>Create a new form to start collecting responses</DialogDescription>
         </DialogHeader>
-        {/* <div className="flex flex-col gap-4 py-4"></div> */}
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
             <FormField
