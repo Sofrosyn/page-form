@@ -25,7 +25,7 @@ export default function Home() {
       <Separator className="my-6" />
       <h2 className="text-4xl font-bold col-span-2">Your forms</h2>
       <Separator className="my-6" />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div className="grid gric-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <CreateFormBtn />
         <Suspense
           fallback={[1, 2, 3, 4].map((el) => (
@@ -38,6 +38,7 @@ export default function Home() {
     </div>
   );
 }
+
 async function CardStatsWrapper() {
   const stats = await GetFormStats();
   return <StatsCards loading={false} data={stats} />;
@@ -50,6 +51,7 @@ interface StatsCardProps {
 
 function StatsCards(props: StatsCardProps) {
   const { data, loading } = props;
+
   return (
     <div className="w-full pt-8 gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       <StatsCard
@@ -60,6 +62,7 @@ function StatsCards(props: StatsCardProps) {
         loading={loading}
         className="shadow-md shadow-blue-600"
       />
+
       <StatsCard
         title="Total submissions"
         icon={<FaWpforms className="text-yellow-600" />}
@@ -90,7 +93,7 @@ function StatsCards(props: StatsCardProps) {
   );
 }
 
-function StatsCard({
+export function StatsCard({
   title,
   value,
   icon,
@@ -101,9 +104,9 @@ function StatsCard({
   title: string;
   value: string;
   helperText: string;
+  className: string;
   loading: boolean;
   icon: ReactNode;
-  className: string;
 }) {
   return (
     <Card className={className}>
@@ -158,7 +161,7 @@ function FormCard({ form }: { form: Form }) {
             <span className="flex items-center gap-2">
               <LuView className="text-muted-foreground" />
               <span>{form.visits.toLocaleString()}</span>
-              <FaWpforms className="text-muted-foreground " />
+              <FaWpforms className="text-muted-foreground" />
               <span>{form.submissions.toLocaleString()}</span>
             </span>
           )}
