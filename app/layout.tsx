@@ -10,8 +10,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PageForm (@CodeWithKliton)",
-  description: "Check my youtube channel for more content",
+  title: "PageForm",
+  description: "Pageform is a web application that can Manage event registrations, create a quick opinion poll, create quizzes, and much more. With Pageform , you can create surveys or quizzes right in your mobile or web browser—no special software required. You get instant results as they come in.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
