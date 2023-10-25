@@ -1,3 +1,48 @@
+# Pageform
+
+Pageform is a web application that can Manage event registrations, create a quick opinion poll, create quizzes, and much more. With Pageform , you can create surveys or quizzes right in your mobile or web browser—no special software required. You get instant results as they come in.
+
+## Demo
+
+Insert gif or link to demo
+
+## Features
+
+- Cross platform
+- Responsive
+- Create forms with a stunning drag and drop designer
+- Layout fields: Title, SubTitle, Spacer, Separator, Paragraph
+- Form fields: Text, Number, Select, Date, Checkbox, Textarea
+- Is easy to add and customize new fields
+- Form preview dialog
+- Share form url
+- Form submission/validation
+- Form stats: visits and submissions
+- Light/dark mode toggle
+
+## Tech Stack
+
+- Nextjs 13 with AppRouter
+- Dnd-kit library
+- ServerActions
+- Typescript
+- Tailwindcss / Shadcn UI
+- Vercel PostgreSQL
+- Prisma as ORM
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=`
+`CLERK_SECRET_KEY`
+`NEXT_PUBLIC_CLERK_SIGN_IN_URL`
+`NEXT_PUBLIC_CLERK_SIGN_UP_URL`
+`NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL`
+`NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL`
+`POSTGRES_PRISMA_URL`
+`POSTGRES_URL_NON_POOLING`
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
